@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
+    <title>video player</title>
+</head>
+<body>
+    <div class="container" onmouseleave="hide_controls()" onmouseenter="show_controls()">
+        <div class="video">
+            <video src="video/google-web-stories.mp4" height="80%" width="80%" onclick="video_play()"></video>
+            <div class="control-container">
+                <div class="title">عنوان</div>
+                <div class="icon">
+                    <div class="box"></div>
+                    <i class="fa fa-play play" onclick="video_play()"></i>
+                    <i class="fa fa-pause pause"></i>
+                    <i class="fa fa-backward backward" onclick="seekButton(-5)"></i>
+                    <i class="fa fa-forward forward" onclick="seekButton(5)"></i>
+                    <i class="fa fa-stop stop" onclick="stop()"></i>
+                    <i class="fa fa-volume-high volume" onmouseenter="show_volume()" onmouseleave="hide_volume()" onclick="mute_volume()">
+                        <div class="volume-percent">100%</div>
+                    </i>
+                    <i class="fa fa-expand fullscreen" onclick="full_screen()"></i>
+                </div>
+                
+                <div class="line">
+                    <div class="first-line"></div>
+                    <div class="tow-line"></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>

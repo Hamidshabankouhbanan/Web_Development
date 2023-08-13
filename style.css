@@ -1,0 +1,143 @@
+.control-container{
+    transition: opacity 1500ms ease;
+}
+.container .video{
+    margin-left:10%;
+    position: relative;
+}
+
+.container .video .title{
+    position: absolute;
+    top: 5%;
+    left:40%;
+    color: white;
+
+}
+
+.container .video .icon .box{
+    position: absolute;
+    width: 25%;
+    height: 13%;
+    background-color: rgb(91, 132, 170);
+    bottom:12px;
+    left: 28.5%;
+    border-radius: 20px 20px;
+    opacity: 0.3;
+}
+
+.container .video .icon i{
+    position: absolute;
+    bottom:40px;
+    font-size: 1.7em;
+    color:white;
+    opacity: 0.8;
+}
+
+.container .video .icon i:hover{
+    transform: scale(1.2);
+    transition: all 300ms ease;
+}
+
+.container .video .play ,.container .video .pause{
+    left: 40%;
+    font-size: 2em;
+}
+
+.container .video .pause{
+    display: none;
+}
+.container .video .backward{
+    left: 36%;
+}
+
+.container .video .forward{
+    left: 43.4%;
+}
+
+.container .video .stop{
+    left: 32%;
+}
+
+.container .video .volume{
+    left: 48%;
+}
+
+.fullscreen{
+    position: absolute;
+    font-size: 2em;
+    left: 77%;
+}
+
+
+.container .video .volume .volume-percent{
+    position: absolute;
+    font-size: 0.5em;
+    bottom: 90%;
+    z-index: -1;
+    opacity: 0;
+    transition: all 500ms ease-out;
+}
+
+.container .video .line{
+    position: absolute;
+    width: 80%;
+    height: 15px;
+    background-color: rgb(121, 144, 165);
+    bottom: 11px;
+}
+
+.container .video .tow-line{
+    position: absolute;
+    width: 0%;
+    height: 15px;
+    background-color: rgb(22, 57, 214);
+    bottom: 0px;
+}
+
+.opacity{
+    animation: opacity ease 2s infinite;
+}
+
+@-moz-keyframes opacity{
+    50%{
+        opacity: 1;
+    }
+}
+@keyframes opacity{
+    50%{
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1000px){
+
+    .container .video .icon i{
+        font-size: 1em;
+        bottom: 30px;
+    }
+
+    .fullscreen{
+        left: 75%;
+    }
+
+    
+}
+
+@media screen and (max-width: 700px){
+
+    .container .video .icon i{
+        font-size: 0.8em;
+    }
+    .container .video .icon .box{
+        height: 17%;
+    }
+}
+@media screen and (max-width: 500px){
+    .container .video .icon i{
+        font-size: 0.6em;
+    }
+    .container .video .icon .box{
+        height: 20%;
+    }
+    
+}
